@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 30px;
+}
+.container {
+    max-width: 400px;
+    max-height: 100%;
+    margin: auto;
+    background-color: #a9fdf2;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+label {
+    font-weight: bold;
+}
+.form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"] {
+  width:80px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    
+    border-radius: 4px;
+}
+.form-group label {
+    display:block;
+    margin-bottom: 5px;
+}
+.qualification{
+    font-size: 30px;
+
+}
+.submit-btn {
+    width:20%;
+	margin-left:20px;
+	float: left; 
+    display: block;
+    width: 30%;
+    padding: 3px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.submit-btn:hover {
+    background-color: #e73509;
+}
+.cancel-btn {
+    width:20%;
+	margin-right:20px;
+	float: right; 
+    display: block;
+    width: 30%;
+    padding: 3px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.cancel-btn:hover {
+    background-color: #f13708;
+}
+.form-group label {
+    display:inline-flex;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>Registration Form</title>
+        <link rel="stylesheet" href="form.css">
+    </head>
+<body background="https://previews.123rf.com/images/kotenko/kotenko1403/kotenko140300008/26854631-snowy-winter-in-a-mountain-forest-sunny-cold-day-with-snow-covered-trees-carpathian-mountains-ukrain.jpg" >
+    <h1>REGISTRATION FORM</h1>
+        <div class="container">
+        <table>
+            <div class="form-content">
+                <tr>
+                    <td>
+                        <label for="name">Name:</label>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name" required>
+    
+                    </td>
+                </tr>
+            </div>
+            <div class="form-content">
+
+            <tr>
+                <td>
+                    <label for="email">E-mail:</label>
+                </td>
+                <td>
+                    <input type="email" id="email" name="email" required>
+
+                </td>
+            </tr>
+            </div>
+            <div class="form-content">
+                <tr>
+                    <td>
+                        <label for="password">Password:</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password" required>
+    
+                    </td>
+                </tr>
+            </div>
+            <div class="form-content">
+
+            <tr>
+                <td>
+                    <label>Gender:</label>
+
+                </td>
+                <td>
+                    <label><input type="radio" name="gender" value="male" required> Male</label>
+                <label><input type="radio" name="gender" value="female" required> Female</label>
+                <label><input type="radio" name="gender" value="other" required> Other</label>
+                </td>
+            </tr>
+            </div>
+            <div class="form-content">
+
+            <tr>
+                <td>
+                    <label for="qualification">Qualification:</label>
+
+                </td>
+                <div class = "qualification">
+                    <td>
+                        <select id="qualification" name="qualification" required>
+                            <option value="">Select Qualification</option>
+                            <option value="graduate">Graduate</option>
+                            <option value="post-graduate">Post Graduate</option>
+                            <option value="doctorate">Doctorate</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </td>
+                </div>
+                
+            </tr>
+            </div>
+            <div class="form-content">
+
+            <tr>
+                <td>
+                    <label for="address">Address:</label>
+                </td>
+                <td>
+
+                    <textarea id="address" name="address" rows="5" cols="33"> </textarea>
+                       
+                 
+                </td>
+            </tr>
+            </div>
+        </table>
+                <hr>
+
+            
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" name="agree" required> I agree to the terms and conditions
+                    </label>
+                </div>
+              
+                <div class="row">
+                    <div class="submit-btn">
+                        <button type="submit" class="submit-btn">Submit</button>
+    </div>    
+    <div class="cancel-btn">
+        <button type="cancel" class="cancel-btn">Cancel</button>
+    </div>
+            
+                </div
+              
+              
+             
+                   
+          
+           
+      
+           
+        
+            
+      
+    </div>
+    </body>
+</html>
