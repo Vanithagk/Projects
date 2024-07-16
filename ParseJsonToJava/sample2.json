@@ -1,0 +1,15 @@
+{
+    "empInfo": {
+            "name": "Anu",
+            "position": "Developer",
+            "salary": "30000",
+            "age": "35"
+    },
+    "skills": [
+            {
+                "programming": "java",
+                "scripting": "unix",
+                "ml": "python"               
+            }
+    ]
+}
