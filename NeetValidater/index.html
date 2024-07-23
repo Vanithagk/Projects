@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET Exam Marks Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body background ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9lpqEH-UnBI3PAYhpUhN88mf_fstcC2f8UA&s""></body>
+    <div class="container">
+        <h1>NEET Exam Marks Calculator</h1>
+        <form id="neet-form">
+            <label for="score">Enter NEET Score:</label>
+            <input type="number" id="score" name="score" required>
+            <button type="button" onclick="calculateAnswers()">Calculate</button>
+        </form>
+        <div id="results">
+            <p id="correct-answers"></p>
+            <p id="incorrect-answers"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
