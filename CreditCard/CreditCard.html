@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Credit_card_Validator</title>
+        <style>
+            *{
+                background-color: antiquewhite;
+            }
+            .container{
+                position:absolute;
+                top:32%;
+                left: 35%;
+                padding:60px;
+                border-radius: 40px;
+                box-shadow:0px 0px 60px rgba(192, 37, 37, 0.4);
+            }
+            button{
+                font-size:20px;
+                border-radius: 40px;
+                color:rgb(56, 165, 42);
+                background-color: brown;
+                cursor: pointer;
+
+            } button:hover{
+                background-color:rgb(247, 180, 37); ;
+                font-size:21px;
+
+            }
+            lable{
+                font-size: 23px;
+
+            }
+            input{
+                width:300px;
+                height: 15px;
+                padding:12px;
+                font-size:21px;
+                border-radius:15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class ="container">
+            <h1> CREDIT CARD VALIDATOR</h1>
+            <div class="input-values">
+            <lable for="cardNumber">Enter Credit Card Number:</lable>
+            <input type="text" id="cardNumber">
+            </div>
+        <br><br>
+            <button onclick="creditCardValidate()"> Validate</button>
+            <p id=isValid></p>
+
+        </div>
+        <script>
+          function creditCardValidate() {
+            const number=document.getElementById('cardNumber').value;
+          if (number.length != 16 || (/[a-zA-Z]/.test(number)) ||(/\s/.test(number))  ) {
+        alert("oops! Please enter a valid credit card number !");
+        return;
+        }
+
+       
+        let total = 0;
+        let double = false;
+
+        for (let i = number.length - 1; i >= 0; i--) {
+        let digit = parseInt(number.charAt(i), 10);
+        
+        if (double) {
+            digit *= 2;
+            if (digit > 9) {
+                digit -= 9; 
+            }
+        }
+
+        total += digit;
+        double = !double; 
+    }
+
+      if (total % 10 === 0) {
+        document.getElementById('isValid').innerText = "Valid Card Number";
+        document.getElementById('isValid').style.color = 'Green';
+        document.getElementById('isValid').style.fontSize = "24px";
+
+    } else {
+        document.getElementById('isValid').innerText = "Invalid Card Number";
+        document.getElementById('isValid').style.color = 'Red';
+        document.getElementById('isValid').style.fontSize = "24px";
+
+    }
+}
+        </script>
+    </body>
+
+</html>
