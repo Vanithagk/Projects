@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif; 
+    background-color: azure;       
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px pink;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    margin-top: 50px;
+}
+
+h2 {
+    color: #005abc;
+}
+
+.form-check {
+    text-align: left;
+    margin: 10px 0;
+}
+
+button {
+    background-color: aquamarine;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}

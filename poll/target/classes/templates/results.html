@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/result.css}">
+    <meta charset="UTF-8">
+    <title>Poll Results</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Poll Results</h2>
+        <div th:each="entry : ${pollResults}" class="resultbox">
+            <p><strong th:text="${entry.key}"></strong></p>
+            <ul>
+                <li th:each="opt : ${entry.value}">
+                    <span th:text="${opt.key}"></span>:
+                    <span th:text="${opt.value}"></span> votes
+                </li>
+            </ul>
+        </div>
+        <a href="/" class="btn">Restart Poll</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px;
+    margin: 0;
+}
+
+.poll-container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333333;
+}
+
+.result {
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+.bar-container {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 24px;
+}
+
+.bar {
+    background-color: #4caf50;
+    height: 100%;
+    width: 0%; 
+    transition: width 0.6s ease;
+}
+
+.vote-count {
+    margin-top: 6px;
+    font-size: 0.95rem;
+    color: #666666;
+}
