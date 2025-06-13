@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<style>
+	     body {
+	         margin: 0;
+	         height: 100vh;
+	         display: flex;
+	         justify-content: center;
+	         align-items: center;
+	         flex-direction: column;
+	         font-family: sans-serif;
+	     }
+	 </style>
+</head>
+	<body th:style="'background-color:' +${selectedcolor}">
+		<h2>Color Picker</h2>
+		<form action="/" method="get">
+		<input type="color" name="color" th:value="${selectedcolor}">
+		<button type="submit">Change Color</button>
+		</form>
+		</body>
+
+
+
+	</html>
