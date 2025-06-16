@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<style>
+		h2 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 20px;
+		}
+
+		.product-card {
+			width: 200px;
+			border: 1px solid #ddd;
+			border-radius: 10px;
+			padding: 15px;
+			text-align: center;
+			box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+		}
+
+		.product-img {
+			width: 140px;
+			height: 200px;
+			object-fit: cover;
+			border-radius: 8px;
+			margin-bottom: 10px;
+		}
+
+		h3, h4 {
+			margin: 5px 0;
+		}
+	</style>
+</head>
+<body>
+	<h2>Mobile Products</h2>
+
+	<div class="container">
+		<div class="product-card" th:each="item : ${productsList}">
+		    <img th:src="${item.url}" class="product-img" />
+		    <h3 th:text="${item.name}"></h3>
+		    <h4 th:text="${item.description}"></h4>
+		    <strong th:text="'₹' + ${item.price}"></strong>
+		</div>
+	</div>
+</body>
+</html>
