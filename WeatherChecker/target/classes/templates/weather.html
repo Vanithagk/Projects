@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Weather Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #ece9e6, #ffffff);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0288d1;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #026aa7;
+        }
+
+        .weather-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .weather-container h3, .weather-container p {
+            margin: 10px 0;
+            color: #444;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #0288d1;
+        }
+    </style>
+</head>
+<body>
+    <h2>Weather App</h2>
+    <form action="weather" method="get">
+        <input type="text" name="city" required placeholder="Enter City">
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <div class="weather-container" th:if="${weather}">
+        <h3>City: <span class="highlight" th:text="${weather.name}"></span></h3>
+        <p>Temperature: <span class="highlight" th:text="${weather.main.temp}"></span> °C</p>
+        <p>Humidity: <span class="highlight" th:text="${weather.main.humidity}"></span>%</p>
+        <p>Description: <span class="highlight" th:text="${weather.weather[0].description}"></span></p>
+    </div>
+</body>
+</html>
